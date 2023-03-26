@@ -1,0 +1,6 @@
+base = {
+  workspace = anjuz_AppSyncServiceLimits; 
+  versionSet = "AWSAppSync/config";
+};
+packages = { AWSAppSyncSDCConfigData-1.0 = .; };
+platformOverride = AL2_x86_64;

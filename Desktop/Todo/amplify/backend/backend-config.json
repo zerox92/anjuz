@@ -1,0 +1,63 @@
+{
+  "api": {
+    "todoandroid": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "todoandroidbb5e286c": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_todoandroidbb5e286c_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "todoandroidbb5e286c"
+        }
+      ]
+    },
+    "AMPLIFY_auth_todoandroidbb5e286c_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "todoandroidbb5e286c"
+        }
+      ]
+    },
+    "AMPLIFY_auth_todoandroidbb5e286c_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "todoandroidbb5e286c"
+        }
+      ]
+    },
+    "AMPLIFY_auth_todoandroidbb5e286c_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "todoandroidbb5e286c"
+        }
+      ]
+    }
+  }
+}

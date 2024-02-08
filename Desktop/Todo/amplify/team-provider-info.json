@@ -1,0 +1,28 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-todoandroid-dev-161800-authRole",
+      "UnauthRoleArn": "arn:aws:iam::880565814858:role/amplify-todoandroid-dev-161800-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::880565814858:role/amplify-todoandroid-dev-161800-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-todoandroid-dev-161800-deployment",
+      "UnauthRoleName": "amplify-todoandroid-dev-161800-unauthRole",
+      "StackName": "amplify-todoandroid-dev-161800",
+      "StackId": "arn:aws:cloudformation:us-east-1:880565814858:stack/amplify-todoandroid-dev-161800/77fcaa10-c5d4-11ee-88f8-0aa66a8c959f",
+      "AmplifyAppId": "d45mq3nqesgau"
+    },
+    "categories": {
+      "auth": {
+        "todoandroidbb5e286c": {
+          "nativeClientId": "1dughnh40qf03alorufeliheo7",
+          "userPoolId": "us-east-1_ZCYCSvL0x",
+          "userPoolName": "GoogleIdp",
+          "webClientId": "1dughnh40qf03alorufeliheo7"
+        }
+      },
+      "api": {
+        "todoandroid": {}
+      }
+    }
+  }
+}

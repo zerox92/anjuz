@@ -17,6 +17,8 @@ import android.view.View
 import com.amplifyframework.core.Amplify
 import com.amplifyframework.datastore.generated.model.Priority
 import com.amplifyframework.datastore.generated.model.Todo
+import com.amplifyframework.auth.cognito.AWSCognitoAuthSession
+import com.amplifyframework.auth.result.AuthSessionResult
 
 
 class MainActivity : ComponentActivity() {
@@ -29,8 +31,17 @@ class MainActivity : ComponentActivity() {
 
     fun fetchSession(view: View) {
         Amplify.Auth.fetchAuthSession(
-            { Log.i("AmplifyQuickstart", "Auth session = $it") },
-            { error -> Log.e("AmplifyQuickstart", "Failed to fetch auth session", error) }
+            {
+                val session = it as AWSCognitoAuthSession
+                when (session.tokensResult.type) {
+                    AuthSessionResult.Type.SUCCESS ->
+                        Log.i("AuthQuickStart", "IdentityId = ${session.tokensResult.value}")
+                    AuthSessionResult.Type.FAILURE ->
+                        Log.w("AuthQuickStart", "IdentityId not found", session.identityIdResult.error)
+
+                }
+            },
+            { Log.e("AuthQuickStart", "Failed to fetch session", it) }
         )
     }
 

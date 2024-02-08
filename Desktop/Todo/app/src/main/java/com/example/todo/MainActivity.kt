@@ -35,9 +35,9 @@ class MainActivity : ComponentActivity() {
                 val session = it as AWSCognitoAuthSession
                 when (session.tokensResult.type) {
                     AuthSessionResult.Type.SUCCESS ->
-                        Log.i("AuthQuickStart", "IdentityId = ${session.tokensResult.value}")
+                        Log.i("AuthQuickStart", "Token Result = ${session.tokensResult.value}")
                     AuthSessionResult.Type.FAILURE ->
-                        Log.w("AuthQuickStart", "IdentityId not found", session.identityIdResult.error)
+                        Log.w("AuthQuickStart", "Token Result not found", session.identityIdResult.error)
 
                 }
             },
@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
     }
 
     fun signInClicked(view: View) {
-        Amplify.Auth.signIn("anjuz", "Windows@123",
+        Amplify.Auth.signIn("", "",
             { result ->
                 if (result.isSignedIn) {
                     Log.i("AuthQuickstart", "Sign in succeeded")
@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
 
     fun saveItemClicked(view: View) {
         val item = Todo.builder()
-            .name("Build Android application")
+            .name("Build Android application at 1900")
             .priority(Priority.NORMAL)
             .build()
 
